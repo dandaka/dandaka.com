@@ -1,1 +1,31 @@
 @import '../../bower_components/bootstrap/scss/bootstrap-flex.scss';
+
+$break-xs: 320px;
+$break-md: 640px;
+
+body {
+  margin: 1em;
+  @media screen and (min-width: $break-md) {
+    margin: 4em;
+  }
+}
+
+.about-text {
+  max-width: 40em;
+}
+
+.userpic {
+  width: 10em;
+  height: 10em;
+}
+
+.userpic-block {
+  padding-bottom: 1em;
+  @media screen and (min-width: $break-md) {
+    padding-bottom: 4em;
+  }
+}
+
+.container-fluid {
+  padding: 0;
+}
