@@ -4627,7 +4627,8 @@ a.bg-danger:focus, a.bg-danger:hover {
     display: none !important; } }
 
 body {
-  margin: 1em; }
+  font-family: 'Open Sans', sans-serif;
+  margin: 2em; }
   @media screen and (min-width: 640px) {
     body {
       margin: 4em; } }
@@ -4640,7 +4641,7 @@ body {
   height: 10em; }
 
 .userpic-block {
-  padding-bottom: 1em; }
+  padding-bottom: 2em; }
   @media screen and (min-width: 640px) {
     .userpic-block {
       padding-bottom: 4em; } }

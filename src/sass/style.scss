@@ -4,7 +4,8 @@ $break-xs: 320px;
 $break-md: 640px;
 
 body {
-  margin: 1em;
+  font-family: 'Open Sans', sans-serif;
+  margin: 2em;
   @media screen and (min-width: $break-md) {
     margin: 4em;
   }
@@ -20,7 +21,7 @@ body {
 }
 
 .userpic-block {
-  padding-bottom: 1em;
+  padding-bottom: 2em;
   @media screen and (min-width: $break-md) {
     padding-bottom: 4em;
   }
