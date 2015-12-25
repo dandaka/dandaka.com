@@ -1,8 +1,9 @@
+$font-size-h1: 2rem;
+
 @import 'bootstrap-custom';
 @import 'font-awesome';
 
 body {
-  font-family: 'Open Sans', sans-serif;
   margin: 2rem;
   @include media-breakpoint-up(md) {
     margin: 4rem;
@@ -30,7 +31,7 @@ body {
 
 .container-fluid {
   padding: 0;
-  max-width: 80rem;
+  max-width: 70rem;
 }
 
 .img-logo {
@@ -40,13 +41,15 @@ body {
   margin-bottom: 1rem;
 }
 
-.intro {
+.accent {
   font-size: 1.2rem;
 }
 
 .sidenote {
   font-size: 0.8rem;
-  max-width: 20rem;
+  @include media-breakpoint-up(md) {
+    max-width: 20rem;
+  }
 }
 
 .list-contacts {
@@ -58,7 +61,7 @@ body {
     display: block;
   }
   margin-right: 1rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.7rem;
   a i {
     transition: color 0.5s;
     color: #000;
@@ -74,4 +77,11 @@ a {
 
 strong {
   color: darken($gray, 20%);
+}
+
+h1 {
+  font-family: 'Open Sans', sans-serif;
+  @include media-breakpoint-up(md) {
+    font-size: 3rem;  
+  }
 }
