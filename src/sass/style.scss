@@ -1,9 +1,6 @@
 @import 'bootstrap-custom';
 @import 'font-awesome';
 
-$break-xs: 320px;
-$break-md: 640px;
-
 body {
   font-family: 'Open Sans', sans-serif;
   margin: 2em;
@@ -20,13 +17,13 @@ body {
 
 .userpic-block {
   padding-bottom: 2em;
-  @media screen and (min-width: $break-md) {
+  @include media-breakpoint-up(md) {
     padding-bottom: 4em;
   }
 }
 .row-contacts {
   padding-top: 2em;
-  @media screen and (min-width: $break-md) {
+  @include media-breakpoint-up(md) {
     padding-top: 4em;
   }
 }
@@ -49,16 +46,20 @@ body {
 }
 
 .list-contacts {
-  .list-inline-item {
-    display: block-inline;
-    margin-right: 1em;
-    margin-bottom: 1em;
-    a i {
-      transition: color 0.5s;
-      color: #000;
-      &:hover {
-        color: $link-color;
-      }
+  @extend .list-unstyled;
+}
+.list-contacts-item {
+  display: inline-block;
+  @include media-breakpoint-up(md) {
+    display: block;
+  }
+  margin-right: 1em;
+  margin-bottom: 0.5rem;
+  a i {
+    transition: color 0.5s;
+    color: #000;
+    &:hover {
+      color: $link-color;
     }
   }
 }
