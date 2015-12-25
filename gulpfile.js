@@ -42,8 +42,8 @@ gulp.task('connect', function() {
 
 gulp.task('watch', function () {
   gulp.watch(['./src/jade/*.jade'], ['jade']);
-  gulp.watch(['./src/sass/*.scss'], ['sass']);
-  watch(['./src/jade/*.jade', './src/sass/*.scss']).pipe(connect.reload());
+  gulp.watch(['./src/sass/**/*.scss'], ['sass']);
+  watch(['./src/jade/*.jade', './src/sass/**/*.scss']).pipe(connect.reload());
 });
 
 gulp.task('icons', function() { 

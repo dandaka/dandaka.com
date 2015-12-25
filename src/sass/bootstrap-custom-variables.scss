@@ -85,8 +85,8 @@ $border-width:               1px !default;
 //
 // Settings for the `<body>` element.
 
-$body-bg:                    #efefef !default;
-$body-color:                 $gray-dark !default;
+$body-bg:                    #f0f0f0 !default;
+$body-color:                 $gray !default;
 
 
 // Links
@@ -174,11 +174,11 @@ $display4-weight:             300 !default;
 
 $line-height:                1.5 !default;
 
-$headings-margin-bottom:     ($spacer / 2) !default;
+$headings-margin-bottom:     ($spacer * 1.5) !default;
 $headings-font-family:       inherit !default;
 $headings-font-weight:       500 !default;
 $headings-line-height:       1.1 !default;
-$headings-color:             inherit !default;
+$headings-color:             #000000 !default;
 
 $lead-font-size:             1.25rem !default;
 $lead-font-weight:           300 !default;
