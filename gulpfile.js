@@ -4,20 +4,20 @@ var sass = require('gulp-sass');
 var watch = require('gulp-watch');
 var connect = require('gulp-connect');
 var favicons = require('gulp-favicons');
+var ga = require('gulp-ga');
 
 var config = {
-  bowerDir: './bower_components' 
+  bowerDir: './bower_components' ,
+  gaId: 'UA-71710979-1',
+  url: 'dandaka.com'
 }
 
 gulp.task('default', ['jade', 'sass', 'connect', 'watch']);
 
 gulp.task('jade', function() {
-  var YOUR_LOCALS = {};
- 
   gulp.src('./src/jade/*.jade')
-    .pipe(jade({
-      locals: YOUR_LOCALS
-    }))
+    .pipe(jade())
+    .pipe(ga({url: config.url, uid: config.gaId, tag: 'body'}))
     .pipe(gulp.dest('./public/'))
 });
 
@@ -39,11 +39,6 @@ gulp.task('connect', function() {
   });
 });
 
-gulp.task('html', function () {
-  gulp.src(['./public/*.html', './public/css'])
-    .pipe(connect.reload());
-});
-
 gulp.task('watch', function () {
   gulp.watch(['./src/jade/*.jade'], ['jade']);
   gulp.watch(['./src/sass/*.scss'], ['sass']);
@@ -55,10 +50,10 @@ gulp.task("favicons", function () {
       appName: "Vlad Rafeev",
       appDescription: "Vlad Rafeev | software project manager",
       developerName: "Vlad Rafeev",
-      developerURL: "http://dandaka.com/",
+      developerURL: config.url,
       background: "#FFFFFF",
       path: "favicons/",
-      url: "http://dandaka.com/",
+      url: config.url,
       display: "standalone",
       orientation: "portrait",
       version: 1.0,
