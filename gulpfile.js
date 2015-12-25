@@ -51,7 +51,7 @@ gulp.task('watch', function () {
 });
  
 gulp.task("favicons", function () {
-  gulp.src("img/bricks.jpg").pipe(favicons({
+  gulp.src("./public/img/bricks.jpg").pipe(favicons({
       appName: "Vlad Rafeev",
       appDescription: "Vlad Rafeev | software project manager",
       developerName: "Vlad Rafeev",
@@ -62,9 +62,9 @@ gulp.task("favicons", function () {
       display: "standalone",
       orientation: "portrait",
       version: 1.0,
-      logging: false,
+      logging: true,
       online: false,
-      html: "index.html",
+      html: "favicons.html",
       replace: true
-  })).pipe(gulp.dest("./public"));
+  })).pipe(gulp.dest("./public/favicons"));
 });
