@@ -25,7 +25,8 @@ gulp.task('sass', function () {
   gulp.src('./src/sass/**/*.scss')
     .pipe(sass({
       includePaths: [
-        config.bowerDir + '/bootstrap/scss'
+        config.bowerDir + '/bootstrap/scss',
+        config.bowerDir + '/font-awesome/scss'
       ],
       outputStyle: 'compressed'
     }).on('error', sass.logError))
@@ -43,6 +44,11 @@ gulp.task('watch', function () {
   gulp.watch(['./src/jade/*.jade'], ['jade']);
   gulp.watch(['./src/sass/*.scss'], ['sass']);
   watch(['./src/jade/*.jade', './src/sass/*.scss']).pipe(connect.reload());
+});
+
+gulp.task('icons', function() { 
+  return gulp.src(config.bowerDir + '/font-awesome/fonts/**.*') 
+    .pipe(gulp.dest('./public/fonts')); 
 });
  
 gulp.task("favicons", function () {

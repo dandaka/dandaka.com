@@ -1,4 +1,5 @@
 @import 'bootstrap-custom';
+@import 'font-awesome';
 
 $break-xs: 320px;
 $break-md: 640px;
@@ -22,6 +23,12 @@ body {
     padding-bottom: 4em;
   }
 }
+.row-contacts {
+  padding-top: 2em;
+  @media screen and (min-width: $break-md) {
+    padding-top: 4em;
+  }
+}
 
 .container-fluid {
   padding: 0;
@@ -37,4 +44,23 @@ body {
 
 .sidenote {
   font-size: 0.8em;
+}
+
+.list-contacts {
+  .list-inline-item {
+    display: block-inline;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    a i {
+      transition: color 0.5s;
+      color: #000;
+      &:hover {
+        color: $link-color;
+      }
+    }
+  }
+}
+
+a {
+  transition: color 0.5s;
 }
