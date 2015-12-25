@@ -4,6 +4,10 @@ var sass = require('gulp-sass');
 var watch = require('gulp-watch');
 var connect = require('gulp-connect');
 
+var config = {
+  bowerDir: './bower_components' 
+}
+
 gulp.task('default', ['jade', 'sass', 'connect', 'watch']);
 
 gulp.task('jade', function() {
@@ -18,7 +22,11 @@ gulp.task('jade', function() {
 
 gulp.task('sass', function () {
   gulp.src('./src/sass/**/*.scss')
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sass({
+      includePaths: [
+        config.bowerDir + '/bootstrap/scss'
+      ]
+    }).on('error', sass.logError))
     .pipe(gulp.dest('./public/css'));
 });
 
