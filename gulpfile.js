@@ -25,7 +25,8 @@ gulp.task('sass', function () {
     .pipe(sass({
       includePaths: [
         config.bowerDir + '/bootstrap/scss'
-      ]
+      ],
+      outputStyle: 'compressed'
     }).on('error', sass.logError))
     .pipe(gulp.dest('./public/css'));
 });
