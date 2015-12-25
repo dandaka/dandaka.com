@@ -3,6 +3,7 @@ var jade = require('gulp-jade');
 var sass = require('gulp-sass');
 var watch = require('gulp-watch');
 var connect = require('gulp-connect');
+var favicons = require('gulp-favicons');
 
 var config = {
   bowerDir: './bower_components' 
@@ -47,4 +48,23 @@ gulp.task('watch', function () {
   gulp.watch(['./src/jade/*.jade'], ['jade']);
   gulp.watch(['./src/sass/*.scss'], ['sass']);
   watch(['./src/jade/*.jade', './src/sass/*.scss']).pipe(connect.reload());
+});
+ 
+gulp.task("favicons", function () {
+  gulp.src("img/bricks.jpg").pipe(favicons({
+      appName: "Vlad Rafeev",
+      appDescription: "Vlad Rafeev | software project manager",
+      developerName: "Vlad Rafeev",
+      developerURL: "http://dandaka.com/",
+      background: "#FFFFFF",
+      path: "favicons/",
+      url: "http://dandaka.com/",
+      display: "standalone",
+      orientation: "portrait",
+      version: 1.0,
+      logging: false,
+      online: false,
+      html: "index.html",
+      replace: true
+  })).pipe(gulp.dest("./public"));
 });
