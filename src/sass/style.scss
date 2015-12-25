@@ -12,8 +12,12 @@ body {
 }
 
 .userpic {
-  width: 10rem;
-  height: 10rem;
+  width: 100%;
+  max-width: 10rem;
+  @include media-breakpoint-up(md) {
+    width: 10rem;
+    height: 10rem;
+  }
 }
 
 .userpic-block {
@@ -42,7 +46,8 @@ body {
 }
 
 .accent {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  font-style: italic;
 }
 
 .sidenote {
@@ -56,10 +61,7 @@ body {
   @extend .list-unstyled;
 }
 .list-contacts-item {
-  display: inline-block;
-  @include media-breakpoint-up(md) {
-    display: block;
-  }
+  display: block;
   margin-right: 1rem;
   margin-bottom: 0.7rem;
   a i {
@@ -76,12 +78,16 @@ a {
 }
 
 strong {
-  color: darken($gray, 20%);
+  color: darken($gray, 10%);
 }
 
 h1 {
   font-family: 'Open Sans', sans-serif;
-  @include media-breakpoint-up(md) {
-    font-size: 3rem;  
+  @include media-breakpoint-up(lg) {
+    font-size: 2.8rem;  
   }
+}
+
+.display-hidden {
+  display: none;
 }
