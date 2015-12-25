@@ -1,4 +1,4 @@
-@import 'bootstrap-flex';
+@import 'bootstrap-custom';
 
 $break-xs: 320px;
 $break-md: 640px;
@@ -25,7 +25,7 @@ body {
 
 .container-fluid {
   padding: 0;
-  max-width: 70em;
+  max-width: 90em;
 }
 
 .img-logo {
