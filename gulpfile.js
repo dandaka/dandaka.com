@@ -24,7 +24,7 @@ gulp.task('jade', function() {
 });
 
 gulp.task('sass', function () {
-  gulp.src('./src/sass/**/*.scss')
+  gulp.src('./src/sass/style.scss')
     .pipe(sass({
       includePaths: [
         config.bowerDir + '/bootstrap/scss',
