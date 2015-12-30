@@ -5,6 +5,8 @@ var watch = require('gulp-watch');
 var connect = require('gulp-connect');
 var favicons = require('gulp-favicons');
 var ga = require('gulp-ga');
+var postcss      = require('gulp-postcss');
+var autoprefixer = require('autoprefixer');
 
 var config = {
   bowerDir: './bower_components' ,
@@ -29,7 +31,9 @@ gulp.task('sass', function () {
         config.bowerDir + '/font-awesome/scss'
       ],
       outputStyle: 'compressed'
-    }).on('error', sass.logError))
+    })
+    .on('error', sass.logError))
+    .pipe(postcss([ autoprefixer({ browsers: ['last 2 versions'] }) ]))
     .pipe(gulp.dest('./public/css'));
 });
 
