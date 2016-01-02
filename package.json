@@ -18,6 +18,7 @@
   "homepage": "https://github.com/dandaka/dandaka.com#readme",
   "devDependencies": {
     "autoprefixer": "^6.2.3",
+    "fontfaceobserver": "^1.6.2",
     "gulp-connect": "^2.3.1",
     "gulp-favicons": "^2.2.2",
     "gulp-ga": "0.0.7",

@@ -97,8 +97,14 @@ strong {
 }
 
 h1 {
-  font-family: 'LatoWebSemibold', sans-serif;
+  font-family: sans-serif;
   @include media-breakpoint-up(lg) {
     font-size: 2.8rem;  
+  }
+}
+
+.fonts-loaded {
+  h1 {
+    font-family: 'LatoWebSemibold', sans-serif;
   }
 }

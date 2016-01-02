@@ -9,5 +9,16 @@ html(lang='en')
     // Bootstrap CSS
     link(rel='stylesheet', href='css/style.css')
     include ../../public/favicons/favicons.html
+
   body
     block content
+    script(type='text/javascript')
+      include ../../node_modules/fontfaceobserver/fontfaceobserver.js
+    script(type='text/javascript').
+      var observer = new FontFaceObserver('LatoWebSemibold', {
+        weight: 400
+      });
+      observer.check().then(function () {
+        document.documentElement.className += " fonts-loaded";
+      }, function () {
+      });
