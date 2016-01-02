@@ -69,7 +69,7 @@ gulp.task("favicons", function () {
       version: 1.0,
       logging: true,
       online: false,
-      html: "favicons.html",
+      html: "./public/favicons/favicons.html",
       replace: true
   })).pipe(gulp.dest("./public/favicons"));
 });
