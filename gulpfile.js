@@ -18,7 +18,7 @@ gulp.task('default', ['jade', 'sass', 'connect', 'watch']);
 
 gulp.task('jade', function() {
   gulp.src('./src/jade/*.jade')
-    .pipe(jade({pretty: true}))
+    .pipe(jade())
     .pipe(ga({url: config.url, uid: config.gaId, tag: 'body'}))
     .pipe(gulp.dest('./public/'))
 });
