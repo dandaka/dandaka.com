@@ -17,8 +17,6 @@ html(lang='en')
     script(type='text/javascript').
       var observer = new FontFaceObserver('LatoWebSemibold', {
         weight: 400
-      });
-      observer.check().then(function () {
+      }).check().then(function () {
         document.documentElement.className += " fonts-loaded";
-      }, function () {
       });
