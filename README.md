@@ -1,3 +1,3 @@
 Vlad Rafeev personal website
 
-http://dandaka.com/
+https://dandaka.com/
